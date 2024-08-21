@@ -1,0 +1,16 @@
+# Save all videos to the downloads folder
+-P ~/Downloads
+
+# Output filename in this format
+-o %(title)s.%(ext)s
+
+# Embed chapters
+--embed-chapters
+
+# Thumbnail Options
+--embed-thumbnail
+--write-thumbnail
+--convert-thumbnails webp
+
+# Sponsorblock Chapters
+--sponsorblock-mark sponsor,selfpromo,filler,interaction

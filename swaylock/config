@@ -1,0 +1,35 @@
+ignore-empty-password
+font=Koulen
+screenshots
+fade-in=0.4
+effect-blur=20x5
+
+# Indicator Settings
+clock
+indicator
+indicator-radius=200
+indicator-thickness=20
+
+# Colors
+text-color=ffffffff
+text-ver-color=ffffffff
+text-caps-lock-color=ffffffff
+text-wrong-color=ffffffff
+
+key-hl-color=5080AA99
+separator-color=00000099
+
+inside-color=101015BB
+inside-clear-color=ffffff77
+inside-ver-color=457099bb
+inside-wrong-color=991111ff
+
+ring-color=606065BB
+ring-clear-color=ffffff77
+ring-ver-color=45709999
+ring-wrong-color=992222AA
+
+line-color=10101088
+line-wrong-color=10101088
+line-ver-color=10101088
+line-clear-color=10101088

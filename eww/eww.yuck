@@ -1,0 +1,87 @@
+(defwindow topdock
+	:monitor 0
+	:stacking "fg"
+	:exclusive true
+	:focusable false
+	:geometry (geometry
+		:x "0%"
+	 	:y "0%"
+		:width "100%"
+		:height "2%"
+		:anchor "top center"
+	)
+	(topdock_layout)
+)
+
+(defwidget topdock_layout []
+	(box :class "topdock"
+		:orientation "horizontal"
+		:halign "center"
+		:valign "center"
+		(window_w)
+		(workspaces)
+		(clock)
+		(_network
+			:strength net
+			:offline "󰤭"
+			:excellent "󰤨"
+			:good "󰤥"
+			:okay "󰤢"
+			:slow "󰤟"
+		)
+	)
+)
+
+(defwidget clock []
+	(box :class "clock"
+		:orientation "vertical"
+		:halign "center"
+		:valign "fill"
+		(label :text "${time.date}")
+		(label :text "${time.hour}:${time.min}:${time.sec} ${time.segment}")
+	)
+)
+
+(defwidget _network [strength offline excellent good okay slow]
+	(box :class "net-box"
+		:space-evenly false
+		:spacing 8
+		(label :text {strength == "" ? offline :
+		  strength < 26? slow :
+		    strength < 51 ? okay :
+			  strength < 76 ? good : excellent}
+		)
+	)
+)
+
+(defpoll time :interval "1s"
+	`date +'{"hour":"%l","min":"%M","sec":"%S","segment":"%p","full":"%r","date":"%x","dayName":"%A","month":"%B","year":"%G","day":"%d"}'`)
+
+(defpoll net :interval "100s"
+	:initial `N/A`
+	`nmcli -t -f SIGNAL,ACTIVE device wifi | awk -F':' '{if($2=="yes")print$1}'`
+)
+
+(deflisten workspaces :initial "[]" "bash ~/.config/eww/scripts/get-workspaces")
+(deflisten current_workspace :initial "1" "bash ~/.config/eww/scripts/get-active-workspace")
+(defwidget workspaces []
+  (eventbox :onscroll "bash ~/.config/eww/scripts/change-active-workspace {} ${current_workspace}" :class "workspaces-widget"
+    (box :space-evenly true
+      (label :text "${workspaces}${current_workspace}" :visible false)
+      (for workspace in workspaces
+        (eventbox :onclick "hyprctl dispatch workspace ${workspace.id}"
+          (box :class "workspace-entry ${workspace.id == current_workspace ? "current" : ""} ${workspace.windows > 0 ? "occupied" : "empty"}"
+            (label :text "${workspace.id}")
+          )
+        )
+      )
+    )
+  )
+)
+
+(deflisten window :initial "..." "sh ~/.config/eww/scripts/get-window-title")
+(defwidget window_w []
+  (box
+    (label :text "${window}")
+  )
+)

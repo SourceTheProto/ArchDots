@@ -1,0 +1,21 @@
+$background-color: #0b101b;
+$primary-text-color: #eeeeee;
+$secondary-text-color: #a4a9b8;
+
+* { all: unset; }
+
+.topdock {
+	font-family: 'Cute Font', sans-serif;
+	font-size: 1.25em;
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-color: rgba($background-color, 0.98);
+	color: rgba($primary-text-color, 1);
+	margin: 0em;
+}
+
+.clock {
+}
+
+.net-box {
+}
