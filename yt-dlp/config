@@ -1,8 +1,5 @@
-# Save all videos to the downloads folder
--P ~/Downloads
-
 # Output filename in this format
--o %(title)s.%(ext)s
+-o %(title)s [(id)].%(ext)s
 
 # Embed chapters
 --embed-chapters
