@@ -1,23 +1,33 @@
 {
-	// Groups
-	"group/hardware": {
-		"orientation": "horizontal",
-		"modules": [
-			"cpu",
-			"memory",
-			"temperature"
-		]
-	},
+    // Groups
+    "group/hardware": {
+        "orientation": "horizontal",
+        "modules": [
+            "cpu",
+            "memory",
+            "temperature"
+        ]
+    },
 
-	// Modules
-	"hyprland/workspaces": {
-		"format": "{name}",
-		"sort-by": "id"
-	},
+    // Modules
+    "custom/updates": {
+        "format":" {}",
+        "tooltip-format": "{}",
+        "escape": true,
+        "return-type": "json",
+        "exec": "~/.config/waybar/scripts/updates.sh",
+        "restart-interval": 600,
+        "tooltip": false
+    },
+
+    "hyprland/workspaces": {
+        "format": "{name}",
+        "sort-by": "id"
+    },
 
     "tray": {
         "spacing": 10,
-		"show-passive-items": true
+        "show-passive-items": true
     },
 
     "keyboard-state": {
@@ -29,39 +39,40 @@
             "unlocked": ""
         }
     },
-	
+
     "clock": {
-		"format": "{:%I:%M:%S %p}",
+        "format": "{:%x | %I:%M:%S %p}",
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-		"interval": 1,
+        "interval": 1,
         "format-alt": "{:%Y-%m-%d}"
     },
-	
+
     "cpu": {
         "format": "{usage}% \uf4bc ",
-		"interval": 10,
+        "interval": 5,
         "tooltip": false
     },
 
     "memory": {
-		"interval": 10,
-        "format": "{}% \ue266 "
+	"interval": 5,
+        "format": "{}%  "
     },
 
     "temperature": {
         "critical-threshold": 80,
+	"interval": 5,
         "format": "{temperatureC}°C {icon} ",
-        "format-icons": ["", "", ""]
+        "format-icons": ["", "", ""]
     },
 
     "network": {
-        "format-wifi": "{essid} ({signalStrength}%)  ",
+        "format-wifi": "{essid}  ",
         "format-ethernet": "{ipaddr}/{cidr} \udb80\ude00",
         "tooltip-format": "{ifname} via {gwaddr} ",
         "format-linked": "{ifname} (No IP) ",
         "format-disconnected": "Disconnected ⚠",
         "format-alt": "{ifname}: {ipaddr}/{cidr}",
-		"on-click": "nm-connection-editor"
+	"on-click": "nm-connection-editor"
     },
 
     "mpd": {
@@ -91,10 +102,10 @@
         "tooltip-format-disconnected": "MPD (disconnected)"
     },
 
-	"wireplumber": {
-		"format": "{volume}%  ",
-		"on-click": "pavucontrol"
-	},
+    "wireplumber": {
+        "format": "{volume}%  ",
+        "on-click": "pavucontrol"
+    },
 
     "pulseaudio": {
         "scroll-step": 5,
@@ -126,5 +137,10 @@
         },
         "escape": true,
         "exec": "$HOME/.config/waybar/mediaplayer.py 2> /dev/null"
+    },
+
+    "battery": {
+        "format": "{capacity}%  ",
+        "interval": 10
     }
 }

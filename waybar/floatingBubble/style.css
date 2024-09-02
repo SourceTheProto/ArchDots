@@ -11,6 +11,7 @@
     /* `otf-font-awesome` is required to be installed for icons */
     font-family: "0xProtoNerdFont";
     font-size: 13px;
+	color: white;
 	border: none;
 }
 
@@ -119,8 +120,39 @@ button:hover {
 	border-radius: 10px;
 }
 
+#custom-updates {
+	margin: 8px 4px;
+	margin-bottom: 0;
+	padding: 0 8px;
+	border-radius: 10px;
+}
+
+#custom-updates.green {
+	background-color: rgba(10, 10, 10, 0.8);
+}
+
+#custom-updates.yellow {
+	background-color: rgba(236, 223, 58, 0.8);
+	font-weight: bold;
+	color: #000000;
+}
+
+#custom-updates.red {
+	background-color: rgba(243, 89, 60, 0.8);
+	font-weight:bold;
+}
+
 #wireplumber.muted {
     background-color: rgba(200, 10, 10, 0.8);
+}
+
+#battery {
+	margin: 8px 2px;
+	margin-right: 4px;
+	margin-bottom: 0;
+	padding: 0 6px;
+    background-color: rgba(10, 10, 10, 0.8);
+	border-radius: 10px;
 }
 
 #group-hardware {
@@ -130,21 +162,11 @@ button:hover {
 #cpu,
 #memory,
 #temperature {
-	padding: 0 16px;
-	margin: 8px -8px;
+	padding: 0 4px;
+	margin: 8px 4px;
 	margin-bottom: 0;
-	background-color: rgba(10, 10, 10, 1);
+    background-color: rgba(10, 10, 10, 0.8);
 	border-radius: 10px;
-}
-
-#cpu {
-	padding-left: 8px;
-	margin-left: 4px;
-}
-
-#temperature {
-	padding-right: 8px;
-	margin-right: 4px;
 }
 
 #network {
@@ -155,7 +177,6 @@ button:hover {
 	background-color: rgba(10, 10, 10, 0.8);
 }
 
-#battery,
 #disk,
 #backlight,
 #pulseaudio,
@@ -165,22 +186,6 @@ button:hover {
     padding: 0 10px;
 	margin-bottom: 0;
     color: #ffffff;
-}
-
-
-/* If workspaces is the leftmost module, omit left margin */
-.modules-left > widget:first-child > #workspaces {
-    margin-left: 0;
-}
-
-/* If workspaces is the rightmost module, omit right margin */
-.modules-right > widget:last-child > #workspaces {
-    margin-right: 0;
-}
-
-#battery {
-    background-color: #ffffff;
-    color: #000000;
 }
 
 #battery.charging, #battery.plugged {

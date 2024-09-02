@@ -2,6 +2,7 @@
 
 SCRIPT_DIR=$(pwd)
 CONFIG_DIR=~/.config
+BIN_DIR=/usr/local/bin
 
 # Grab Neovim configs from git
 echo "Cloning neovim config..."
@@ -50,6 +51,17 @@ rm -rf $CONFIG_DIR/easyeffects
 ln -sv $SCRIPT_DIR/easyeffects
 rm -rf $CONFIG_DIR/nvim
 ln -sv $SCRIPT_DIR/nvim
+rm -rf $CONFIG_DIR/dunst
+ln -sv $SCRIPT_DIR/dunst
 ln -sfv $SCRIPT_DIR/starship.toml
 ln -sfv $SCRIPT_DIR/electron28-flags.conf
 ln -sfv $SCRIPT_DIR/spotify-launcher.conf
+
+# Setting up scripts in bin for waybar
+
+cd $BIN_DIR
+
+ln -sfv $SCRIPT_DIR/scripts/cliphist.sh
+ln -sfv $SCRIPT_DIR/scripts/mediaplayer.py
+ln -sfv $SCRIPT_DIR/scripts/notifications.py
+ln -sfv $SCRIPT_DIR/scripts/volumecontrol.sh
