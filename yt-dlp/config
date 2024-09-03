@@ -1,11 +1,10 @@
 # Output filename in this format
--o %(title)s [(id)].%(ext)s
+-o "%(title)s [%(id)s].%(ext)s"
 
 # Embed chapters
 --embed-chapters
 
 # Thumbnail Options
---embed-thumbnail
 --write-thumbnail
 --convert-thumbnails webp
 
