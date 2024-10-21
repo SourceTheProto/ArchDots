@@ -15,7 +15,7 @@
         "tooltip-format": "{}",
         "escape": true,
         "return-type": "json",
-        "exec": "~/.config/waybar/scripts/updates.sh",
+        "exec": "~/.config/waybar/scripts/updates-color.sh",
         "restart-interval": 600,
         "tooltip": false
     },
