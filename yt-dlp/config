@@ -6,7 +6,6 @@
 
 # Thumbnail Options
 --write-thumbnail
---convert-thumbnails webp
 
 # Sponsorblock Chapters
 --sponsorblock-mark sponsor,selfpromo,filler,interaction
