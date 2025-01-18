@@ -4,8 +4,13 @@
 # Embed chapters
 --embed-chapters
 
+# Embed subtitles
+--embed-subs
+--no-write-auto-subs
+
 # Thumbnail Options
---write-thumbnail
+--embed-thumbnail
+--convert-thumbnails none
 
 # Sponsorblock Chapters
 --sponsorblock-mark sponsor,selfpromo,filler,interaction
