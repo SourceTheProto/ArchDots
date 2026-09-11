@@ -1,4 +1,40 @@
-nvim
-obs-studio/profiler_data
-obs-studio/logs
-OpenRGB/logs
+# Set up as whitelist
+*
+!*/
+
+# Track files
+!.gitignore
+
+# Track Config Folders
+!.config/btop/*
+!.config/dunst/*
+!.config/easyeffects/*
+!.config/eww/*
+!.config/flameshot/*
+!.config/fsearch/*
+!.config/hypr/*
+!.config/kitty/*
+!.config/mpv/*
+!.config/obs-studio/*
+!.config/OpenRGB/*
+!.config/qimgv/*
+!.config/qt5ct/*
+!.config/qt6ct/*
+!.config/rofi/*
+!.config/scripts/*
+!.config/spicetify/*
+!.config/swaylock/*
+!.config/thefuck/*
+!.config/waybar/*
+!.config/wireplumber/*
+!.config/wlogout/*
+!.config/yt-dlp/*
+
+# Track Config Files
+!.config/electron28-flags.conf
+!.config/ktrashrc
+!.config/spotify-launcher.conf
+!.config/starship.toml
+
+# Double ignore nvim !!1!!
+.config/nvim
