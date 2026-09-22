@@ -15,6 +15,7 @@
 !.config/hypr/*
 !.config/kitty/*
 !.config/mpv/*
+!.config/nvim/*
 !.config/obs-studio/*
 !.config/OpenRGB/*
 !.config/qimgv/*
@@ -35,6 +36,3 @@
 !.config/ktrashrc
 !.config/spotify-launcher.conf
 !.config/starship.toml
-
-# Double ignore nvim !!1!!
-.config/nvim
