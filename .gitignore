@@ -19,6 +19,7 @@
 !.config/obs-studio/*
 !.config/OpenRGB/*
 !.config/qimgv/*
+.config/qimgv/savedState.conf
 !.config/qt5ct/*
 !.config/qt6ct/*
 !.config/rofi/*
@@ -36,3 +37,4 @@
 !.config/ktrashrc
 !.config/spotify-launcher.conf
 !.config/starship.toml
+!.zshrc

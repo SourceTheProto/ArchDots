@@ -4,7 +4,7 @@
 // sourced from header module //
 
     "layer": "top",
-    "position": "bottom",
+    "position": "top",
     "mod": "dock",
     "height": 31,
     "exclusive": true,
@@ -17,16 +17,18 @@
 
 	"modules-left": ["custom/padd","custom/l_end","custom/power","custom/r_end","custom/l_end","hyprland/workspaces","custom/r_end","custom/l_end","wlr/taskbar","custom/spotify","custom/r_end","","custom/padd"],
 	"modules-center": ["custom/padd","custom/l_end","clock","custom/r_end","custom/padd"],
-	"modules-right": ["custom/padd","custom/l_end","custom/updates","custom/r_end","custom/l_end","tray","custom/r_end","custom/l_end","backlight","network","pulseaudio","battery","custom/notifications","custom/r_end","custom/padd"],
+	"modules-right": ["custom/padd","custom/l_end","custom/updates","custom/r_end","custom/l_end","tray","custom/r_end","custom/l_end","network","pulseaudio","custom/r_end","custom/padd"],
+	// "modules-right": ["custom/padd","custom/l_end","custom/updates","custom/r_end","custom/l_end","tray","custom/r_end","custom/l_end","backlight","network","pulseaudio","battery","custom/notifications","custom/r_end","custom/padd"],
 
 
 // sourced from modules based on config.ctl //
 
     "custom/power": {
-        "format": " ",
+        "format": "",
         "rotate": 0,
         "on-click": "wlogout",
-        "tooltip": true
+        "on-click-right": "sh -c 'pkill waybar; waybar' & disown",
+        "tooltip": false
     },
 
     "custom/cliphist": {
@@ -186,7 +188,7 @@
         "format": "{icon} {volume}",
         "rotate": 0,
         "format-muted": "婢",
-        "on-click": "pavucontrol -t 3",
+        "on-click": "pavucontrol -t 1",
         "on-click-middle": "volumecontrol.sh -o m",
         "on-scroll-up": "volumecontrol.sh -o i",
         "on-scroll-down": "volumecontrol.sh -o d",
@@ -235,7 +237,7 @@
         },
         "return-type": "json",
         "exec-if": "which dunstctl",
-        "exec": "notifications.py",
+        "exec": "/home/source/.config/scripts/notifications.py",
         "on-click": "sleep 0.1 && dunstctl history-pop",
         "on-click-middle": "dunstctl history-clear",
         "on-click-right": "dunstctl close-all",

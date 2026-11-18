@@ -1,12 +1,7 @@
 ignore-empty-password
 font=Koulen
-screenshots
-fade-in=0.4
-effect-blur=20x5
 
 # Indicator Settings
-clock
-indicator
 indicator-radius=200
 indicator-thickness=20
 
