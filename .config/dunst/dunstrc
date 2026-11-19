@@ -17,23 +17,21 @@
     #
     # If this option is set to mouse or keyboard, the monitor option
     # will be ignored.
-    follow = mouse
+    # follow = mouse
 
     ### Geometry ###
 
     # dynamic width from 0 to 300
-    # width = (0, 300)
-    # constant width of 300
-    width = 300
+    width = (350, 400)
 
     # The maximum height of a single notification, excluding the frame.
-    height = 300
+    height = (50, 400) 
 
     # Position the notification in the top right corner
     origin = top-right
 
     # Offset from the origin
-    offset = 20x20
+    offset = (10, 20)
 
     # Scale factor. It is auto-detected if value is 0.
     scale = 0
@@ -73,7 +71,7 @@
     # The transparency of the window.  Range: [0; 100].
     # This option will only work if a compositing window manager is
     # present (e.g. xcompmgr, compiz, etc.). (X11 only)
-    # transparency = 70
+    # transparency = 100
 
     # Draw a line of "separator_height" pixel height between two
     # notifications.
@@ -123,7 +121,8 @@
 
     ### Text ###
 
-    font = mononoki Nerd Font 8
+    # font = mononoki Nerd Font 8
+    font = DejaVu Sanss 14
 
     # The spacing between lines.  If the height is smaller than the
     # font height, it will get raised to the font height.
@@ -214,7 +213,7 @@
     min_icon_size = 32
 
     # Scale larger icons down to this size, set to 0 to disable
-    max_icon_size = 128
+    max_icon_size = 64
 
     # Paths to default icons (only necessary when not using recursive icon lookup)
     icon_path = $HOME/.icons/Tela-circle-dracula/16/actions:$HOME/.icons/Tela-circle-dracula/16/apps:$HOME/.icons/Tela-circle-dracula/16/devices:$HOME/.icons/Tela-circle-dracula/16/mimetypes:$HOME/.icons/Tela-circle-dracula/16/panel:$HOME/.icons/Tela-circle-dracula/16/places:$HOME/.icons/Tela-circle-dracula/16/status
@@ -250,7 +249,7 @@
     # corners.
     # The radius will be automatically lowered if it exceeds half of the
     # notification height to avoid clipping text and/or icons.
-    corner_radius = 10
+    corner_radius = 15
 
     # Ignore the dbus closeNotification message.
     # Useful to enforce the timeout set by dunst configuration. Without this
