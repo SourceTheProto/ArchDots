@@ -221,9 +221,18 @@ hl.window_rule({
 hl.window_rule({
 	match = { class = "org.pulseaudio.pavucontrol" },
 
-	move = "monitor_w-950-20 50",
+	move = "monitor_w-950-16 50",
 	size = {950, 650},
 	float = true,
+})
+
+-- Keep mega at the top right, floating
+hl.window_rule({
+	match = { class = "MEGAsync" },
+
+	move = "monitor_w-402-16 50",
+	-- size = {950, 650},
+	-- float = true,
 })
 
 -- Keep flameshot monitor selector floating in the center
