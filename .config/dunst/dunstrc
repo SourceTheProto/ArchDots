@@ -1,42 +1,23 @@
 # See dunst(5) for all configuration options
 
 [global]
-    ### Display ###
-
-    # Which monitor should the notifications be displayed on.
     monitor = 0
 
     # Display notification on focused monitor.  Possible modes are:
     #   mouse: follow mouse pointer
     #   keyboard: follow window with keyboard focus
     #   none: don't follow anything
-    #
-    # "keyboard" needs a window manager that exports the
-    # _NET_ACTIVE_WINDOW property.
-    # This should be the case for almost all modern window managers.
-    #
     # If this option is set to mouse or keyboard, the monitor option
     # will be ignored.
-    # follow = mouse
+    follow = none
 
-    ### Geometry ###
-
-    # dynamic width from 0 to 300
-    width = (350, 400)
-
-    # The maximum height of a single notification, excluding the frame.
-    height = (50, 400) 
-
-    # Position the notification in the top right corner
+    ### Position ###
     origin = top-right
-
-    # Offset from the origin
+    width = (350, 400)
+    height = (50, 400) 
     offset = (10, 20)
+    scale = 0 # auto-detect
 
-    # Scale factor. It is auto-detected if value is 0.
-    scale = 0
-
-    # Maximum number of notification (0 means no limit)
     notification_limit = 20
 
     ### Progress bar ###
@@ -48,36 +29,16 @@
     # Set the progress bar height. This includes the frame, so make sure
     # it's at least twice as big as the frame width.
     progress_bar_height = 10
-
-    # Set the frame width of the progress bar
     progress_bar_frame_width = 0
-
-    # Set the minimum width for the progress bar
     progress_bar_min_width = 125
-
-    # Set the maximum width for the progress bar
     progress_bar_max_width = 250
-
-    # Corner radius for the progress bar. 0 disables rounded corners.
     progress_bar_corner_radius = 4
 
-    # Corner radius for the icon image.
     icon_corner_radius = 10
 
     # Show how many messages are currently hidden (because of
     # notification_limit).
     indicate_hidden = yes
-
-    # The transparency of the window.  Range: [0; 100].
-    # This option will only work if a compositing window manager is
-    # present (e.g. xcompmgr, compiz, etc.). (X11 only)
-    # transparency = 100
-
-    # Draw a line of "separator_height" pixel height between two
-    # notifications.
-    # Set to 0 to disable.
-    # If gap_size is greater than 0, this setting will be ignored.
-    separator_height = 2
 
     # Padding between text and separator.
     padding = 8
@@ -89,7 +50,6 @@
     text_icon_padding = 10
 
     # Defines width in pixels of frame around the notification window.
-    # Set to 0 to disable.
     frame_width = 5
 
     # Defines color of the frame around the notification window.
@@ -117,17 +77,14 @@
     # Set to 0 to disable.
     # A client can set the 'transient' hint to bypass this. See the rules
     # section for how to disable this if necessary
-    # idle_threshold = 120
+    idle_threshold = 120
 
     ### Text ###
+    font = DejaVu Sans 12
 
-    # font = mononoki Nerd Font 8
-    font = DejaVu Sanss 14
+    line_height = 1
 
-    # The spacing between lines.  If the height is smaller than the
-    # font height, it will get raised to the font height.
-    line_height = 3
-
+    markup = full
     # Possible values are:
     # full: Allow a small subset of html markup in notifications:
     #        <b>bold</b>
@@ -147,10 +104,6 @@
     # no:    Disable markup parsing, incoming notifications will be treated as
     #        plain text. Dunst will not advertise that it has the body-markup
     #        capability if this is set as a global setting.
-    #
-    # It's important to note that markup inside the format option will be parsed
-    # regardless of what this is set to.
-    markup = full
 
     # The format of the message.  Possible variables are:
     #   %a  appname
@@ -162,7 +115,7 @@
     #   %n  progress value if set without any extra characters
     #   %%  Literal %
     # Markup is allowed
-    format = "%s\n%b"
+    format = "<span size='120%'><b>%s</b></span>\n%b"
 
     # Alignment of message text.
     # Possible values are "left", "center" and "right".
@@ -175,23 +128,18 @@
     # Show age of message if message is older than show_age_threshold
     # seconds.
     # Set to -1 to disable.
-    show_age_threshold = 60
+    show_age_threshold = -1
 
     # Specify where to make an ellipsis in long lines.
     # Possible values are "start", "middle" and "end".
     ellipsize = middle
 
-    # Ignore newlines '\n' in notifications.
     ignore_newline = no
-
-    # Stack together notifications with the same content
     stack_duplicates = true
-
-    # Hide the count of stacked notifications with the same content
     hide_duplicate_count = false
 
     # Display indicators for URLs (U) and actions (A).
-    show_indicators = yes
+    show_indicators = no
 
     ### Icons ###
 
@@ -200,31 +148,23 @@
     #enable_recursive_icon_lookup = true
 
     # Set icon theme (only used for recursive icon lookup)
-    #icon_theme = Adwaita
     # You can also set multiple icon themes, with the leftmost one being used first.
-    icon_theme = "Tela-circle-dracula"
+    # icon_theme = "Tela-circle-dracula"
 
     # Align icons left/right/top/off
     icon_position = left
 
-    # Scale small icons up to this size, set to 0 to disable. Helpful
-    # for e.g. small files or high-dpi screens. In case of conflict,
-    # max_icon_size takes precedence over this.
-    min_icon_size = 32
-
-    # Scale larger icons down to this size, set to 0 to disable
-    max_icon_size = 64
+    min_icon_size = 32 # Scale small icons up to this size
+    max_icon_size = 64 # Scale larger icons down to this size
 
     # Paths to default icons (only necessary when not using recursive icon lookup)
-    icon_path = $HOME/.icons/Tela-circle-dracula/16/actions:$HOME/.icons/Tela-circle-dracula/16/apps:$HOME/.icons/Tela-circle-dracula/16/devices:$HOME/.icons/Tela-circle-dracula/16/mimetypes:$HOME/.icons/Tela-circle-dracula/16/panel:$HOME/.icons/Tela-circle-dracula/16/places:$HOME/.icons/Tela-circle-dracula/16/status
+    icon_path = $HOME/dotfiles/.config/dunst/icons/status:$HOME/.icons/Tela-circle-dracula/16/actions:$HOME/.icons/Tela-circle-dracula/16/apps:$HOME/.icons/Tela-circle-dracula/16/devices:$HOME/.icons/Tela-circle-dracula/16/mimetypes:$HOME/.icons/Tela-circle-dracula/16/panel:$HOME/.icons/Tela-circle-dracula/16/places:$HOME/.icons/Tela-circle-dracula/16/status
 
     ### History ###
 
     # Should a notification popped up from history be sticky or timeout
     # as if it would normally do.
     sticky_history = yes
-
-    # Maximum amount of notifications kept in history
     history_length = 20
 
     ### Misc/Advanced ###
@@ -238,10 +178,8 @@
     # Always run rule-defined scripts, even if the notification is suppressed
     always_run_script = true
 
-    # Define the title of the windows spawned by dunst
+    # Define the title and class of the windows spawned by dunst
     title = Dunst
-
-    # Define the class of the windows spawned by dunst
     class = Dunst
 
     # Define the corner radius of the notification window
@@ -264,20 +202,7 @@
     # applications (default: overlay)
     # layer = top
 
-    # Set this to true to use X11 output on Wayland.
     force_xwayland = false
-
-    ### Legacy
-
-    # Use the Xinerama extension instead of RandR for multi-monitor support.
-    # This setting is provided for compatibility with older nVidia drivers that
-    # do not support RandR and using it on systems that support RandR is highly
-    # discouraged.
-    #
-    # By enabling this setting dunst will not be able to detect when a monitor
-    # is connected or disconnected which might break follow mode if the screen
-    # layout changes.
-    force_xinerama = false
 
     ### mouse
 
@@ -383,16 +308,12 @@
 #    msg_urgency = critical
 #    fullscreen = show
 
-#[espeak]
-#    summary = "*"
-#    script = dunst_espeak.sh
-
 #[script-test]
 #    summary = "*script*"
 #    script = dunst_test.sh
 
 #[ignore]
-#    # This notification will not be displayed
+#    # This notification will not be displayed, but will be included in the history
 #    summary = "foobar"
 #    skip_display = true
 
@@ -400,11 +321,6 @@
 #    # This notification will not be saved in history
 #    summary = "foobar"
 #    history_ignore = yes
-
-#[skip-display]
-#    # This notification will not be displayed, but will be included in the history
-#    summary = "foobar"
-#    skip_display = yes
 
 #[signed_on]
 #    appname = Pidgin
@@ -432,31 +348,23 @@
 #
 # vim: ft=cfg
 
-[Type-1]
-    appname = "t1"
-    format = "<b>%s</b>"
-
-[Type-2]
-    appname = "t2"
-    format = "<span size="250%">%s</span>\n%b"
-
 [urgency_critical]
     background = "#f5e0dc"
     foreground = "#1e1e2e"
     frame_color = "#f38ba8"
-    icon = "$HOME/.config/dunst/icons/critical.svg"
+    icon = "$HOME/dotfiles/.config/dunst/icons/status/dialog-error.svg"
     timeout = 0
 
-[urgency_low]
-    background = "#6591A380"
-    foreground = "#CCF0FFE6"
-    frame_color = "#6591A303"
-    icon = "$HOME/.config/dunst/icons/hyprdots.svg"
-    timeout = 5
-
 [urgency_normal]
-    background = "#3A4A6B80"
+    background = "#19202ED8"
     foreground = "#CCDDFFE6"
     frame_color = "#3A4A6B03"
-    icon = "$HOME/.config/dunst/icons/hyprdots.svg"
+    icon = "dialog-information.svg"
+    timeout = 5
+
+[urgency_low]
+    background = "#6591A3FF"
+    foreground = "#CCF0FFE6"
+    frame_color = "#6591A303"
+    icon = "dialog-information.svg"
     timeout = 5
