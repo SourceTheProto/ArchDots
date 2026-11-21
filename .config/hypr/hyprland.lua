@@ -231,8 +231,6 @@ hl.window_rule({
 	match = { class = "MEGAsync" },
 
 	move = "monitor_w-402-16 50",
-	-- size = {950, 650},
-	-- float = true,
 })
 
 -- Keep flameshot monitor selector floating in the center
@@ -243,6 +241,25 @@ hl.window_rule({
 	},
 
 	float = true,
+})
+
+-- make blender preferences float
+hl.window_rule({
+	match = {
+	        class = "blender",
+		title = "Preferences",
+	},
+
+	float = true,
+})
+
+hl.window_rule({
+	match = {
+	        class = "kitty",
+		float = true,
+	},
+
+	size = {1020, 650},
 })
 
 -- Force apps to open on second monitor workspaces

@@ -17,6 +17,7 @@ local browser      = "flatpak run one.ablaze.floorp"
 
 -- Program Shortcuts
 hl.bind("SUPER + RETURN", hl.dsp.exec_cmd(terminal))
+hl.bind("SUPER + SHIFT + RETURN", hl.dsp.exec_cmd(terminal, {float = true}))
 hl.bind("SUPER + E",      hl.dsp.exec_cmd(fileManager))
 hl.bind("SUPER + A",      hl.dsp.exec_cmd(menu))
 hl.bind("SUPER + ESCAPE", hl.dsp.exec_cmd(taskManager))
