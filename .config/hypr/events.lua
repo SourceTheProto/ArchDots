@@ -7,6 +7,12 @@
 -- Autostart necessary processes (like notifications daemons, status bars, etc.)
 -- Or execute your favorite apps at launch like this:
 
+---@param monitor string
+---@param path_to_wallpaper string
+local function set_wallpaper(monitor, path_to_wallpaper)
+	hl.exec_cmd("sleep 1; hyprctl hyprpaper wallpaper '" .. monitor .. ", " .. path_to_wallpaper .. "'")
+end
+
 hl.on("hyprland.start", function()
 	-- Apps
 	hl.exec_cmd("discord")
@@ -20,8 +26,8 @@ hl.on("hyprland.start", function()
 
 	-- Hyprpaper
 	hl.exec_cmd("hyprpaper")
-	hl.exec_cmd("sleep 1; hyprctl hyprpaper wallpaper 'HDMI-A-1, ~/Pictures/Wallpapers/BotW_Landscape.jpg'")
-	hl.exec_cmd("sleep 1; hyprctl hyprpaper wallpaper 'DP-1, ~/Pictures/Wallpapers/fluffycuddlesnearthefireplace.png'")
+	set_wallpaper("HDMI-A-1", "~/Pictures/Wallpapers/BotW_Landscape.jpg")
+	set_wallpaper("DP-1", "~/Pictures/Wallpapers/fluffycuddlesnearthefireplace.png")
 
 	-- start background processes
 	hl.exec_cmd("systemctl --user start hyprpolkitagent")
