@@ -36,3 +36,17 @@ hl.on("hyprland.shutdown", function()
 	-- stop polkit agent, just in case I swap to KDE
 	hl.exec_cmd("systemctl --user stop hyprpolkitagent")
 end)
+
+hl.on("window.update_state", function(window, changes)
+	if window == nil or changes == nil then
+		return
+	end
+
+	if changes.float == true then
+		if     window.class == "kitty" then
+			hl.dispatch(hl.dsp.window.resize({ x = 1020, y = 650 }))
+		elseif window.class == "org.kde.dolphin" then
+			hl.dispatch(hl.dsp.window.resize({ x = 1120, y = 750 }))
+		end
+	end
+end)
