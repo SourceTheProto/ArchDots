@@ -10,21 +10,24 @@ local locker       = "hyprlock"
 local screeshotter = "flameshot gui"
 local clipboard    = "cursor-clip"
 local browser      = "flatpak run one.ablaze.floorp"
+local calculator   = "qalculate-qt"
 
 ---------------------
 ---- KEYBINDINGS ----
 ---------------------
 
 -- Program Shortcuts
-hl.bind("SUPER + RETURN", hl.dsp.exec_cmd(terminal))
+hl.bind("SUPER + RETURN",         hl.dsp.exec_cmd(terminal))
 hl.bind("SUPER + SHIFT + RETURN", hl.dsp.exec_cmd(terminal, {float = true}))
-hl.bind("SUPER + E",      hl.dsp.exec_cmd(fileManager))
-hl.bind("SUPER + A",      hl.dsp.exec_cmd(menu))
-hl.bind("SUPER + ESCAPE", hl.dsp.exec_cmd(taskManager))
-hl.bind("SUPER + B",      hl.dsp.exec_cmd(browser))
+hl.bind("SUPER + E",              hl.dsp.exec_cmd(fileManager))
+hl.bind("SUPER + SHIFT + E",      hl.dsp.exec_cmd(fileManager, {float = true}))
+hl.bind("SUPER + A",              hl.dsp.exec_cmd(menu))
+hl.bind("SUPER + ESCAPE",         hl.dsp.exec_cmd(taskManager))
+hl.bind("SUPER + B",              hl.dsp.exec_cmd(browser))
+hl.bind("SUPER + C",              hl.dsp.exec_cmd(calculator), {float = true})
 
 -- Component Shortcuts
-hl.bind("SUPER + SHIFT + L", hl.dsp.exec_cmd(locker))
+hl.bind("SUPER + ALT + L", hl.dsp.exec_cmd(locker))
 hl.bind("PRINT", hl.dsp.exec_cmd(screeshotter))
 hl.bind("SUPER + V", hl.dsp.exec_cmd(clipboard))
 
@@ -41,13 +44,35 @@ hl.bind("SUPER + J", hl.dsp.focus({ direction = "down" }))
 hl.bind("SUPER + K", hl.dsp.focus({ direction = "up" }))
 hl.bind("SUPER + L", hl.dsp.focus({ direction = "right" }))
 
--- Workspace Traversal - with main_mod + [0-9]
+-- Window Transposition (Vim binds)
+hl.bind("SUPER + SHIFT + H", hl.dsp.window.swap({ direction = "left" }))
+hl.bind("SUPER + SHIFT + J", hl.dsp.window.swap({ direction = "down" }))
+hl.bind("SUPER + SHIFT + K", hl.dsp.window.swap({ direction = "up" }))
+hl.bind("SUPER + SHIFT + L", hl.dsp.window.swap({ direction = "right" }))
+
+-- Workspace Traversal - with SUPER + [0-9]
 -- Move active window to workspace with main_mod + SHIFT + [0-9]
 for i = 1, 10 do
     local key = i % 10 -- 10 maps to key 0
-    hl.bind("SUPER + " .. key,             hl.dsp.focus({ workspace = i}))
+    hl.bind("SUPER + " .. key,             hl.dsp.focus({ workspace = i }))
     hl.bind("SUPER + SHIFT + " .. key,     hl.dsp.window.move({ workspace = i }))
 end
+
+-- Special workspaces for persistent apps above the right hand homerow
+hl.bind("SUPER + Y", hl.dsp.focus({ workspace = "S" }))
+hl.bind("SUPER + U", hl.dsp.focus({ workspace = "D-P" }))
+hl.bind("SUPER + I", hl.dsp.focus({ workspace = "D" }))
+hl.bind("SUPER + O", hl.dsp.focus({ workspace = "F" }))
+hl.bind("SUPER + P", hl.dsp.focus({ workspace = "T" }))
+hl.bind("SUPER + SHIFT + Y", hl.dsp.window.move({ workspace = "S" }))
+hl.bind("SUPER + SHIFT + U", hl.dsp.window.move({ workspace = "D-P" }))
+hl.bind("SUPER + SHIFT + I", hl.dsp.window.move({ workspace = "D" }))
+hl.bind("SUPER + SHIFT + O", hl.dsp.window.move({ workspace = "F" }))
+hl.bind("SUPER + SHIFT + P", hl.dsp.window.move({ workspace = "T" }))
+
+-- Move workspaces across monitors
+hl.bind("SUPER + ALT + 1", hl.dsp.workspace.move({ monitor = "HDMI-A-1" }))
+hl.bind("SUPER + ALT + 2", hl.dsp.workspace.move({ monitor = "DP-1" }))
 
 -- Scroll through existing workspaces with main_mod + scroll
 hl.bind("SUPER + mouse_down", hl.dsp.focus({ workspace = "e+1" }))

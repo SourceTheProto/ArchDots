@@ -263,11 +263,11 @@ hl.window_rule({
 })
 
 -- Force apps to open on second monitor workspaces
-hl.window_rule({ match = { class = "spotify" },                  workspace = "6", monitor = "DP-1", })
-hl.window_rule({ match = { class = "discord" },                  workspace = "7", monitor = "DP-1", })
-hl.window_rule({ match = { title = "Discord Popout" },           workspace = "5", monitor = "DP-1", })
-hl.window_rule({ match = { class = "app.fluxer.FluxerDesktop" }, workspace = "8", monitor = "DP-1", })
-hl.window_rule({ match = { class = "org.telegram.desktop" },     workspace = "9", monitor = "DP-1", })
+hl.window_rule({ match = { class = "spotify" },                  workspace = "S",   monitor = "DP-1", })
+hl.window_rule({ match = { class = "discord" },                  workspace = "D",   monitor = "DP-1", })
+hl.window_rule({ match = { title = "Discord Popout" },           workspace = "D-P", monitor = "DP-1", })
+hl.window_rule({ match = { class = "app.fluxer.FluxerDesktop" }, workspace = "F",   monitor = "DP-1", })
+hl.window_rule({ match = { class = "org.telegram.desktop" },     workspace = "T",   monitor = "DP-1", })
 
 -- Hide clipboard from screenshares for privacy
 hl.layer_rule({ match = { namespace = "cursor-clip" }, no_screen_share = true, })

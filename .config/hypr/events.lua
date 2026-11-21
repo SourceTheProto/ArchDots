@@ -16,7 +16,7 @@ end
 hl.on("hyprland.start", function()
 	-- Apps
 	hl.exec_cmd("discord")
-	hl.exec_cmd("fluxer", { workspace = "8 silent", monitor = "DP-1" })
+	hl.exec_cmd("fluxer", { workspace = "F silent", monitor = "DP-1" })
 
 	-- Components
 	hl.exec_cmd("waybar")
