@@ -7,32 +7,19 @@
 -- Autostart necessary processes (like notifications daemons, status bars, etc.)
 -- Or execute your favorite apps at launch like this:
 
----@param monitor string
----@param path_to_wallpaper string
-local function set_wallpaper(monitor, path_to_wallpaper)
-	hl.exec_cmd("sleep 1; hyprctl hyprpaper wallpaper '" .. monitor .. ", " .. path_to_wallpaper .. "'")
-end
-
 hl.on("hyprland.start", function()
 	-- Apps
 	hl.exec_cmd("discord")
 	hl.exec_cmd("fluxer", { workspace = "F silent", monitor = "DP-1" })
 
 	-- Components
+	hl.exec_cmd("hyprpaper")
 	hl.exec_cmd("waybar")
-	hl.exec_cmd("dunst")
+	hl.exec_cmd("dunst || sleep 15; dunst") -- If dunst fails, then try again after 15 seconds
 	hl.exec_cmd("flameshot")
 	hl.exec_cmd("cursor-clip-daemon")
 	hl.exec_cmd("openrgb --startminimized")
-
-	-- Hyprpaper
-	hl.exec_cmd("hyprpaper")
-	set_wallpaper("HDMI-A-1", "~/Pictures/Wallpapers/BotW_Landscape.jpg")
-	set_wallpaper("DP-1", "~/Pictures/Wallpapers/fluffycuddlesnearthefireplace.png")
-
-	-- start background processes
 	hl.exec_cmd("systemctl --user start hyprpolkitagent")
-
 	-- Just in case XDPH doesn't work, uncomment this & restart
 	-- hl.exec_cmd("~/.config/hypr/scripts/fix-XDPH.sh")
 end)
