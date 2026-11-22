@@ -255,6 +255,15 @@ hl.window_rule({
 
 hl.window_rule({
 	match = {
+	        class = "org.openrgb.OpenRGB",
+	},
+
+	size = {1130, 650},
+	float = true,
+})
+
+hl.window_rule({
+	match = {
 	        class = "kitty",
 		float = true,
 	},

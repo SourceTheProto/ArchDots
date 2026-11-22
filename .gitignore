@@ -18,6 +18,7 @@
 !.config/nvim/*
 !.config/obs-studio/*
 !.config/OpenRGB/*
+.config/OpenRGB/Configuration.json
 !.config/qimgv/*
 .config/qimgv/savedState.conf
 !.config/qt5ct/*

@@ -23,6 +23,7 @@ hl.on("hyprland.start", function()
 	hl.exec_cmd("dunst")
 	hl.exec_cmd("flameshot")
 	hl.exec_cmd("cursor-clip-daemon")
+	hl.exec_cmd("openrgb --startminimized")
 
 	-- Hyprpaper
 	hl.exec_cmd("hyprpaper")
