@@ -4,13 +4,11 @@
 
 -- See https://wiki.hypr.land/configuring/core/autostart/
 
--- Autostart necessary processes (like notifications daemons, status bars, etc.)
--- Or execute your favorite apps at launch like this:
-
 hl.on("hyprland.start", function()
 	-- Apps
 	hl.exec_cmd("discord")
 	hl.exec_cmd("fluxer", { workspace = "F silent", monitor = "DP-1" })
+	hl.exec_cmd("openrgb --startminimized")
 
 	-- Components
 	hl.exec_cmd("hyprpaper")
@@ -18,7 +16,6 @@ hl.on("hyprland.start", function()
 	hl.exec_cmd("dunst || sleep 15; dunst") -- If dunst fails, then try again after 15 seconds
 	hl.exec_cmd("flameshot")
 	hl.exec_cmd("cursor-clip-daemon")
-	hl.exec_cmd("openrgb --startminimized")
 	hl.exec_cmd("systemctl --user start hyprpolkitagent")
 	-- Just in case XDPH doesn't work, uncomment this & restart
 	-- hl.exec_cmd("~/.config/hypr/scripts/fix-XDPH.sh")
@@ -29,6 +26,7 @@ hl.on("hyprland.shutdown", function()
 	hl.exec_cmd("systemctl --user stop hyprpolkitagent")
 end)
 
+-- Events for windows that are commonly floated
 hl.on("window.update_state", function(window, changes)
 	if window == nil or changes == nil then
 		return

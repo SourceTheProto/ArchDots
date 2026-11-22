@@ -38,32 +38,29 @@ hl.bind("SUPER + P", hl.dsp.window.pseudo())
 hl.bind("CONTROL + ALT + DELETE", hl.dsp.exec_cmd("command -v hyprshutdown >/dev/null 2>&1 && hyprshutdown || hyprctl dispatch 'hl.dsp.exit()'"))
 hl.bind("SUPER + SHIFT + Q", hl.dsp.exec_cmd("hyprctl kill"))
 
--- Window Traversal (Vim binds)
+-- Window Traversal & Transposition (Vim binds)
 hl.bind("SUPER + H", hl.dsp.focus({ direction = "left" }))
 hl.bind("SUPER + J", hl.dsp.focus({ direction = "down" }))
 hl.bind("SUPER + K", hl.dsp.focus({ direction = "up" }))
 hl.bind("SUPER + L", hl.dsp.focus({ direction = "right" }))
-
--- Window Transposition (Vim binds)
 hl.bind("SUPER + SHIFT + H", hl.dsp.window.swap({ direction = "left" }))
 hl.bind("SUPER + SHIFT + J", hl.dsp.window.swap({ direction = "down" }))
 hl.bind("SUPER + SHIFT + K", hl.dsp.window.swap({ direction = "up" }))
 hl.bind("SUPER + SHIFT + L", hl.dsp.window.swap({ direction = "right" }))
 
--- Workspace Traversal - with SUPER + [0-9]
--- Move active window to workspace with main_mod + SHIFT + [0-9]
+-- Workspace Traversal & Transposition (with SUPER (+ SHIFT) + [0-9])
 for i = 1, 10 do
     local key = i % 10 -- 10 maps to key 0
     hl.bind("SUPER + " .. key,             hl.dsp.focus({ workspace = i }))
     hl.bind("SUPER + SHIFT + " .. key,     hl.dsp.window.move({ workspace = i }))
 end
 
--- Special workspaces for persistent apps above the right hand homerow
-hl.bind("SUPER + Y", hl.dsp.focus({ workspace = "S" }))
-hl.bind("SUPER + U", hl.dsp.focus({ workspace = "D-P" }))
-hl.bind("SUPER + I", hl.dsp.focus({ workspace = "D" }))
-hl.bind("SUPER + O", hl.dsp.focus({ workspace = "F" }))
-hl.bind("SUPER + P", hl.dsp.focus({ workspace = "T" }))
+-- Named workspaces for persistent apps (with windowrules) above the right hand homerow
+hl.bind("SUPER + Y", hl.dsp.focus({ workspace = "S" })) -- Spotify/Music
+hl.bind("SUPER + U", hl.dsp.focus({ workspace = "D-P" })) -- Discord Popout
+hl.bind("SUPER + I", hl.dsp.focus({ workspace = "D" })) -- Discord
+hl.bind("SUPER + O", hl.dsp.focus({ workspace = "F" })) -- Fluxer
+hl.bind("SUPER + P", hl.dsp.focus({ workspace = "T" })) -- Telegram
 hl.bind("SUPER + SHIFT + Y", hl.dsp.window.move({ workspace = "S" }))
 hl.bind("SUPER + SHIFT + U", hl.dsp.window.move({ workspace = "D-P" }))
 hl.bind("SUPER + SHIFT + I", hl.dsp.window.move({ workspace = "D" }))
@@ -74,7 +71,7 @@ hl.bind("SUPER + SHIFT + P", hl.dsp.window.move({ workspace = "T" }))
 hl.bind("SUPER + ALT + 1", hl.dsp.workspace.move({ monitor = "HDMI-A-1" }))
 hl.bind("SUPER + ALT + 2", hl.dsp.workspace.move({ monitor = "DP-1" }))
 
--- Scroll through existing workspaces with main_mod + scroll
+-- Scroll through existing workspaces
 hl.bind("SUPER + mouse_down", hl.dsp.focus({ workspace = "e+1" }))
 hl.bind("SUPER + mouse_up",   hl.dsp.focus({ workspace = "e-1" }))
 
@@ -87,12 +84,12 @@ hl.bind("SUPER + mouse:272", hl.dsp.window.drag(),   { mouse = true })
 hl.bind("SUPER + mouse:273", hl.dsp.window.resize(), { mouse = true })
 
 -- Multimedia keys for volume and LCD brightness
-hl.bind("XF86AudioRaiseVolume", hl.dsp.exec_cmd("wpctl set-volume -l 1 @DEFAULT_AUDIO_SINK@ 5%+"), { locked = true, repeating = true })
-hl.bind("XF86AudioLowerVolume", hl.dsp.exec_cmd("wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-"),      { locked = true, repeating = true })
-hl.bind("XF86AudioMute",        hl.dsp.exec_cmd("wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"),     { locked = true, repeating = true })
-hl.bind("XF86AudioMicMute",     hl.dsp.exec_cmd("wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle"),   { locked = true, repeating = true })
-hl.bind("XF86MonBrightnessUp",  hl.dsp.exec_cmd("brightnessctl -e4 -n2 set 5%+"),                  { locked = true, repeating = true })
-hl.bind("XF86MonBrightnessDown",hl.dsp.exec_cmd("brightnessctl -e4 -n2 set 5%-"),                  { locked = true, repeating = true })
+hl.bind("XF86AudioRaiseVolume", hl.dsp.exec_cmd("wpctl set-volume -l 1 @DEFAULT_AUDIO_SINK@ 5%+"),{ locked = true, repeating = true })
+hl.bind("XF86AudioLowerVolume", hl.dsp.exec_cmd("wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-"),     { locked = true, repeating = true })
+hl.bind("XF86AudioMute",        hl.dsp.exec_cmd("wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"),    { locked = true, repeating = true })
+hl.bind("XF86AudioMicMute",     hl.dsp.exec_cmd("wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle"),  { locked = true, repeating = true })
+hl.bind("XF86MonBrightnessUp",  hl.dsp.exec_cmd("brightnessctl -e4 -n2 set 5%+"),                 { locked = true, repeating = true })
+hl.bind("XF86MonBrightnessDown",hl.dsp.exec_cmd("brightnessctl -e4 -n2 set 5%-"),                 { locked = true, repeating = true })
 
 -- Player Binds
 hl.bind("XF86AudioNext",  hl.dsp.exec_cmd("playerctl next"),       { locked = true })
