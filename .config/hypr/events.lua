@@ -34,8 +34,6 @@ hl.on("hyprland.start", function()
 
 	-- Just in case XDPH doesn't work, uncomment this & restart
 	-- hl.exec_cmd("~/.config/hypr/scripts/fix-XDPH.sh")
-	hl.exec_cmd("sleep 3; hyprctl eval 'fluxerInitial:set_enabled(false)'")
-	hl.exec_cmd("sleep 3; hyprctl eval 'fluxerPost:set_enabled(true)'")
 end)
 
 hl.on("hyprland.shutdown", function()
