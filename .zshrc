@@ -37,6 +37,11 @@ alias grep="grep --color"
 alias updates="echo Repos:;checkupdates;echo AUR:;paru -Qua"
 alias paru="paru --bottomup"
 alias fm="dolphin . > /dev/null 2>&1 & disown"
+# Git aliases
+alias gs="git status"
+alias ga="git add"
+alias gl="git log --oneline"
+alias gc="git commit"
 
 export PATH=$PATH:/home/source/.spicetify
 export EDITOR=nvim
