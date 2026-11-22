@@ -8,7 +8,7 @@ local fileManager  = "dolphin"
 local taskManager  = terminal .. " sh -c btop"
 local locker       = "hyprlock"
 local screeshotter = "flameshot gui"
-local clipboard    = "cursor-clip"
+local clipboard    = "cursor-clip-toggle"
 local browser      = "flatpak run one.ablaze.floorp"
 local calculator   = "qalculate-qt"
 

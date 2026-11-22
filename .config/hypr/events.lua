@@ -22,7 +22,7 @@ hl.on("hyprland.start", function()
 	hl.exec_cmd("waybar")
 	hl.exec_cmd("dunst")
 	hl.exec_cmd("flameshot")
-	hl.exec_cmd("cursor-clip --daemon")
+	hl.exec_cmd("cursor-clip-daemon")
 
 	-- Hyprpaper
 	hl.exec_cmd("hyprpaper")
