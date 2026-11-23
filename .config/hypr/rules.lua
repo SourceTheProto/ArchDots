@@ -36,6 +36,14 @@ hl.window_rule({
 })
 
 hl.window_rule({
+	match = { class = "com.saivert.pwvucontrol" },
+
+	move = "monitor_w-960-16 50",
+	size = {960, 650},
+	float = true,
+})
+
+hl.window_rule({
 	match = { class = "MEGAsync" },
 	move = "monitor_w-402-16 50",
 })
