@@ -1,0 +1,14 @@
+[sie][Equalizer#0]
+bypass=true
+
+[sie][Equalizer#0#left]
+band5Frequency=60
+band5Gain=-36
+band5Mode=6
+band5Type=7
+
+[sie][Equalizer#0#right]
+band5Frequency=60
+band5Gain=-36
+band5Mode=6
+band5Type=7

@@ -1,0 +1,5 @@
+[sie][Gate#0]
+bypass=true
+curveThreshold=-35
+reduction=-70
+sidechainLookahead=0.008

@@ -8,7 +8,7 @@
 # Track Config Folders
 !.config/btop/*
 !.config/dunst/*
-!.config/easyeffects/*
+!.config/easyeffects/*/*/*
 !.config/eww/*
 !.config/flameshot/*
 !.config/fsearch/*
@@ -39,3 +39,10 @@
 !.config/spotify-launcher.conf
 !.config/starship.toml
 !.zshrc
+
+# This is for the next commit
+dot-config/OpenRGB/Configuration.json
+dot-config/OpenRGB/logs
+dot-config/qimgv/savedState.conf
+dot-config/obs-studio/logs
+dot-config/obs-studio/profiler_data
