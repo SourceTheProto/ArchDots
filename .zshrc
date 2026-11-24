@@ -16,7 +16,7 @@ HISTFILE=~/.histfile
 HISTSIZE=1000
 SAVEHIST=1000
 setopt beep
-bindkey -e
+bindkey -v
 # End of lines configured by zsh-newuser-install
 
 # Keybinds
@@ -45,3 +45,4 @@ alias gc="git commit"
 
 export PATH=$PATH:/home/source/.spicetify
 export EDITOR=nvim
+export KEYTIMEOUT=1
