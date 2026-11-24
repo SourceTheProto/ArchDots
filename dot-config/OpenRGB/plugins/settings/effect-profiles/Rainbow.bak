@@ -1,0 +1,33 @@
+{
+    "Effects": [
+        {
+            "AllowOnlyFirst": false,
+            "AutoStart": true,
+            "Brightness": 100,
+            "ControllerZones": [
+                {
+                    "description": "ASUS Aura Keyboard Device",
+                    "is_segment": false,
+                    "location": "HID: /dev/hidraw6",
+                    "name": "ASUS ROG Strix Flare II Animate",
+                    "reverse": true,
+                    "segment_idx": -1,
+                    "self_brightness": 100,
+                    "serial": "",
+                    "vendor": "ASUS",
+                    "version": "03.00.13",
+                    "zone_idx": 0
+                }
+            ],
+            "CustomName": "",
+            "EffectClassName": "RainbowWave",
+            "FPS": 30,
+            "RandomColors": false,
+            "Slider2Val": 10,
+            "Speed": 25,
+            "Temperature": 0,
+            "Tint": 0
+        }
+    ],
+    "version": 2
+}

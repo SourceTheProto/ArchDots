@@ -1,4 +1,4 @@
 [submodule ".config/nvim"]
-	path = .config/nvim
+	path = dot-config/nvim
 	url = https://github.com/SourceTheProto/neovim-config
 	branch = source-config

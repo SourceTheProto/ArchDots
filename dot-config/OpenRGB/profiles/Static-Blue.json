@@ -1,0 +1,985 @@
+{
+    "controllers": [
+        {
+            "active_mode": 0,
+            "colors": [
+                16757504,
+                16757504,
+                16757504,
+                16757504,
+                16757504,
+                16757504,
+                16757504,
+                16757504,
+                16757504,
+                16757504,
+                16757504,
+                16757504,
+                16757504,
+                16757504,
+                16757504,
+                16757504,
+                16757504,
+                16757504,
+                16757504,
+                16757504,
+                16757504,
+                16757504,
+                16757504,
+                16757504,
+                16757504,
+                16757504,
+                16757504,
+                16757504,
+                16757504,
+                16757504,
+                16757504,
+                16757504,
+                16757504,
+                16757504,
+                16757504,
+                16757504,
+                16757504,
+                16757504,
+                16757504,
+                16757504,
+                16757504,
+                16757504,
+                16757504,
+                16757504,
+                16757504,
+                16757504,
+                16757504,
+                16757504,
+                16757504,
+                16757504,
+                16757504,
+                16757504,
+                16757504,
+                16757504,
+                16757504,
+                16757504,
+                16757504,
+                16757504,
+                16757504,
+                16757504,
+                16757504,
+                16757504,
+                16757504,
+                16757504,
+                16757504,
+                16757504,
+                16757504,
+                16757504,
+                16757504,
+                16757504,
+                16757504,
+                16757504,
+                16757504,
+                16757504,
+                16757504,
+                16757504,
+                16757504,
+                16757504,
+                16757504,
+                16757504,
+                16757504,
+                16757504,
+                16757504,
+                16757504,
+                16757504,
+                16757504,
+                16757504,
+                16757504,
+                16757504,
+                16757504,
+                16757504,
+                16757504,
+                16757504,
+                16757504,
+                16757504,
+                16757504,
+                16757504,
+                16757504,
+                16757504,
+                16757504,
+                16757504,
+                16757504,
+                16757504,
+                16757504,
+                16757504,
+                16757504,
+                16757504,
+                16757504,
+                16757504,
+                16757504,
+                16757504,
+                16757504,
+                16757504,
+                16757504,
+                16757504,
+                16757504,
+                16757504,
+                16757504,
+                16757504,
+                16757504,
+                16757504,
+                16757504,
+                16757504,
+                16757504,
+                16757504,
+                16757504,
+                16757504,
+                16757504,
+                16757504,
+                16757504,
+                16757504,
+                16757504,
+                16757504,
+                16757504
+            ],
+            "description": "ASUS Aura Keyboard Device",
+            "display_name": "",
+            "flags": 1,
+            "leds": [
+                {
+                    "name": "Key: Escape"
+                },
+                {
+                    "name": "Key: `"
+                },
+                {
+                    "name": "Key: Tab"
+                },
+                {
+                    "name": "Key: Caps Lock"
+                },
+                {
+                    "name": "Key: Left Shift"
+                },
+                {
+                    "name": "Key: Left Control"
+                },
+                {
+                    "name": "Key: 1"
+                },
+                {
+                    "name": "Key: Left Windows"
+                },
+                {
+                    "name": "Key: F1"
+                },
+                {
+                    "name": "Key: 2"
+                },
+                {
+                    "name": "Key: Q"
+                },
+                {
+                    "name": "Key: A"
+                },
+                {
+                    "name": "Key: Z"
+                },
+                {
+                    "name": "Key: Left Alt"
+                },
+                {
+                    "name": "Key: F2"
+                },
+                {
+                    "name": "Key: 3"
+                },
+                {
+                    "name": "Key: W"
+                },
+                {
+                    "name": "Key: S"
+                },
+                {
+                    "name": "Key: X"
+                },
+                {
+                    "name": "Key: F3"
+                },
+                {
+                    "name": "Key: 4"
+                },
+                {
+                    "name": "Key: E"
+                },
+                {
+                    "name": "Key: D"
+                },
+                {
+                    "name": "Key: C"
+                },
+                {
+                    "name": "Key: F4"
+                },
+                {
+                    "name": "Key: 5"
+                },
+                {
+                    "name": "Key: R"
+                },
+                {
+                    "name": "Key: F"
+                },
+                {
+                    "name": "Key: V"
+                },
+                {
+                    "name": "Key: 6"
+                },
+                {
+                    "name": "Key: T"
+                },
+                {
+                    "name": "Key: G"
+                },
+                {
+                    "name": "Key: B"
+                },
+                {
+                    "name": "Key: Space"
+                },
+                {
+                    "name": "Key: F5"
+                },
+                {
+                    "name": "Key: 7"
+                },
+                {
+                    "name": "Key: Y"
+                },
+                {
+                    "name": "Key: H"
+                },
+                {
+                    "name": "Key: N"
+                },
+                {
+                    "name": "Key: F6"
+                },
+                {
+                    "name": "Key: 8"
+                },
+                {
+                    "name": "Key: U"
+                },
+                {
+                    "name": "Key: J"
+                },
+                {
+                    "name": "Key: M"
+                },
+                {
+                    "name": "Key: F7"
+                },
+                {
+                    "name": "Key: 9"
+                },
+                {
+                    "name": "Key: I"
+                },
+                {
+                    "name": "Key: K"
+                },
+                {
+                    "name": "Key: ,"
+                },
+                {
+                    "name": "Key: F8"
+                },
+                {
+                    "name": "Key: 0"
+                },
+                {
+                    "name": "Key: O"
+                },
+                {
+                    "name": "Key: L"
+                },
+                {
+                    "name": "Key: ."
+                },
+                {
+                    "name": "Key: Right Alt"
+                },
+                {
+                    "name": "Key: F9"
+                },
+                {
+                    "name": "Key: -"
+                },
+                {
+                    "name": "Key: P"
+                },
+                {
+                    "name": "Key: ;"
+                },
+                {
+                    "name": "Key: /"
+                },
+                {
+                    "name": "Key: Right Fn"
+                },
+                {
+                    "name": "Key: F10"
+                },
+                {
+                    "name": "Key: ="
+                },
+                {
+                    "name": "Key: ["
+                },
+                {
+                    "name": "Key: '"
+                },
+                {
+                    "name": "Key: Menu"
+                },
+                {
+                    "name": "Key: F11"
+                },
+                {
+                    "name": "Key: Backspace"
+                },
+                {
+                    "name": "Key: ]"
+                },
+                {
+                    "name": "Key: Right Shift"
+                },
+                {
+                    "name": "Key: F12"
+                },
+                {
+                    "name": "Key: \\ (ANSI)"
+                },
+                {
+                    "name": "Key: Enter"
+                },
+                {
+                    "name": "Key: Right Control"
+                },
+                {
+                    "name": "Key: Print Screen"
+                },
+                {
+                    "name": "Key: Insert"
+                },
+                {
+                    "name": "Key: Delete"
+                },
+                {
+                    "name": "Key: Left Arrow"
+                },
+                {
+                    "name": "Key: Scroll Lock"
+                },
+                {
+                    "name": "Key: Home"
+                },
+                {
+                    "name": "Key: End"
+                },
+                {
+                    "name": "Key: Up Arrow"
+                },
+                {
+                    "name": "Key: Down Arrow"
+                },
+                {
+                    "name": "Key: Pause/Break"
+                },
+                {
+                    "name": "Key: Page Up"
+                },
+                {
+                    "name": "Key: Page Down"
+                },
+                {
+                    "name": "Key: Right Arrow"
+                },
+                {
+                    "name": "Key: Num Lock"
+                },
+                {
+                    "name": "Key: Number Pad 7"
+                },
+                {
+                    "name": "Key: Number Pad 4"
+                },
+                {
+                    "name": "Key: Number Pad 1"
+                },
+                {
+                    "name": "Key: Number Pad 0"
+                },
+                {
+                    "name": "Key: Number Pad /"
+                },
+                {
+                    "name": "Key: Number Pad 8"
+                },
+                {
+                    "name": "Key: Number Pad 5"
+                },
+                {
+                    "name": "Key: Number Pad 2"
+                },
+                {
+                    "name": "Key: Number Pad *"
+                },
+                {
+                    "name": "Key: Number Pad 9"
+                },
+                {
+                    "name": "Key: Number Pad 6"
+                },
+                {
+                    "name": "Key: Number Pad 3"
+                },
+                {
+                    "name": "Key: Number Pad ."
+                },
+                {
+                    "name": "Key: Number Pad -"
+                },
+                {
+                    "name": "Key: Number Pad +"
+                },
+                {
+                    "name": "Key: Number Pad Enter"
+                },
+                {
+                    "name": "Underglow LED 1"
+                },
+                {
+                    "name": "Underglow LED 2"
+                },
+                {
+                    "name": "Underglow LED 3"
+                },
+                {
+                    "name": "Underglow LED 4"
+                },
+                {
+                    "name": "Underglow LED 5"
+                },
+                {
+                    "name": "Underglow LED 6"
+                },
+                {
+                    "name": "Underglow LED 7"
+                },
+                {
+                    "name": "Underglow LED 8"
+                },
+                {
+                    "name": "Underglow LED 9"
+                },
+                {
+                    "name": "Underglow LED 10"
+                },
+                {
+                    "name": "Underglow LED 11"
+                },
+                {
+                    "name": "Underglow LED 12"
+                },
+                {
+                    "name": "Underglow LED 13"
+                },
+                {
+                    "name": "Underglow LED 14"
+                },
+                {
+                    "name": "Underglow LED 15"
+                },
+                {
+                    "name": "Underglow LED 16"
+                },
+                {
+                    "name": "Underglow LED 17"
+                },
+                {
+                    "name": "Underglow LED 18"
+                },
+                {
+                    "name": "Underglow LED 19"
+                },
+                {
+                    "name": "Underglow LED 20"
+                },
+                {
+                    "name": "Underglow LED 21"
+                },
+                {
+                    "name": "Underglow LED 22"
+                },
+                {
+                    "name": "Underglow LED 23"
+                },
+                {
+                    "name": "Underglow LED 24"
+                },
+                {
+                    "name": "Underglow LED 25"
+                },
+                {
+                    "name": "Underglow LED 26"
+                },
+                {
+                    "name": "Underglow LED 27"
+                },
+                {
+                    "name": "Underglow LED 28"
+                },
+                {
+                    "name": "Underglow LED 29"
+                },
+                {
+                    "name": "Underglow LED 30"
+                }
+            ],
+            "location": "HID: /dev/hidraw2",
+            "modes": [
+                {
+                    "brightness": 0,
+                    "brightness_max": 0,
+                    "brightness_min": 0,
+                    "color_mode": 1,
+                    "colors_max": 0,
+                    "colors_min": 0,
+                    "direction": 0,
+                    "flags": 32,
+                    "name": "Direct",
+                    "speed": 0,
+                    "speed_max": 0,
+                    "speed_min": 0
+                },
+                {
+                    "brightness": 4,
+                    "brightness_max": 4,
+                    "brightness_min": 0,
+                    "color_mode": 2,
+                    "colors": [
+                        0
+                    ],
+                    "colors_max": 1,
+                    "colors_min": 1,
+                    "direction": 0,
+                    "flags": 336,
+                    "name": "Static",
+                    "speed": 0,
+                    "speed_max": 0,
+                    "speed_min": 0
+                },
+                {
+                    "brightness": 4,
+                    "brightness_max": 4,
+                    "brightness_min": 0,
+                    "color_mode": 2,
+                    "colors": [
+                        0
+                    ],
+                    "colors_max": 2,
+                    "colors_min": 1,
+                    "direction": 0,
+                    "flags": 465,
+                    "name": "Breathing",
+                    "speed": 30,
+                    "speed_max": 0,
+                    "speed_min": 255
+                },
+                {
+                    "brightness": 4,
+                    "brightness_max": 4,
+                    "brightness_min": 0,
+                    "color_mode": 0,
+                    "colors_max": 0,
+                    "colors_min": 0,
+                    "direction": 0,
+                    "flags": 273,
+                    "name": "Spectrum Cycle",
+                    "speed": 30,
+                    "speed_max": 0,
+                    "speed_min": 255
+                },
+                {
+                    "brightness": 4,
+                    "brightness_max": 4,
+                    "brightness_min": 0,
+                    "color_mode": 2,
+                    "colors": [
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "colors_max": 7,
+                    "colors_min": 1,
+                    "direction": 0,
+                    "flags": 351,
+                    "name": "Rainbow Wave",
+                    "speed": 30,
+                    "speed_max": 0,
+                    "speed_min": 255
+                },
+                {
+                    "brightness": 4,
+                    "brightness_max": 4,
+                    "brightness_min": 0,
+                    "color_mode": 2,
+                    "colors": [
+                        0
+                    ],
+                    "colors_max": 2,
+                    "colors_min": 1,
+                    "direction": 0,
+                    "flags": 465,
+                    "name": "Reactive",
+                    "speed": 30,
+                    "speed_max": 0,
+                    "speed_min": 255
+                },
+                {
+                    "brightness": 4,
+                    "brightness_max": 4,
+                    "brightness_min": 0,
+                    "color_mode": 2,
+                    "colors": [
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "colors_max": 8,
+                    "colors_min": 1,
+                    "direction": 0,
+                    "flags": 465,
+                    "name": "Ripple",
+                    "speed": 30,
+                    "speed_max": 0,
+                    "speed_min": 255
+                },
+                {
+                    "brightness": 4,
+                    "brightness_max": 4,
+                    "brightness_min": 0,
+                    "color_mode": 2,
+                    "colors": [
+                        0
+                    ],
+                    "colors_max": 3,
+                    "colors_min": 1,
+                    "direction": 0,
+                    "flags": 465,
+                    "name": "Starry Night",
+                    "speed": 30,
+                    "speed_max": 0,
+                    "speed_min": 255
+                },
+                {
+                    "brightness": 4,
+                    "brightness_max": 4,
+                    "brightness_min": 0,
+                    "color_mode": 2,
+                    "colors": [
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "colors_max": 6,
+                    "colors_min": 6,
+                    "direction": 3,
+                    "flags": 469,
+                    "name": "Quicksand",
+                    "speed": 30,
+                    "speed_max": 0,
+                    "speed_min": 255
+                },
+                {
+                    "brightness": 4,
+                    "brightness_max": 4,
+                    "brightness_min": 0,
+                    "color_mode": 2,
+                    "colors": [
+                        0
+                    ],
+                    "colors_max": 3,
+                    "colors_min": 1,
+                    "direction": 0,
+                    "flags": 465,
+                    "name": "Current",
+                    "speed": 30,
+                    "speed_max": 0,
+                    "speed_min": 255
+                },
+                {
+                    "brightness": 4,
+                    "brightness_max": 4,
+                    "brightness_min": 0,
+                    "color_mode": 2,
+                    "colors": [
+                        0
+                    ],
+                    "colors_max": 3,
+                    "colors_min": 1,
+                    "direction": 0,
+                    "flags": 465,
+                    "name": "Rain Drop",
+                    "speed": 30,
+                    "speed_max": 0,
+                    "speed_min": 255
+                }
+            ],
+            "name": "ASUS ROG Strix Flare II Animate",
+            "serial": "",
+            "type": 5,
+            "vendor": "ASUS",
+            "version": "03.00.13",
+            "zones": [
+                {
+                    "display_name": "",
+                    "flags": 0,
+                    "leds_count": 134,
+                    "leds_max": 134,
+                    "leds_min": 134,
+                    "matrix_map": {
+                        "height": 7,
+                        "map": [
+                            0,
+                            4294967295,
+                            8,
+                            14,
+                            19,
+                            24,
+                            4294967295,
+                            34,
+                            39,
+                            44,
+                            49,
+                            55,
+                            61,
+                            66,
+                            70,
+                            4294967295,
+                            4294967295,
+                            4294967295,
+                            4294967295,
+                            74,
+                            78,
+                            83,
+                            4294967295,
+                            4294967295,
+                            4294967295,
+                            4294967295,
+                            4294967295,
+                            4294967295,
+                            4294967295,
+                            4294967295,
+                            1,
+                            6,
+                            9,
+                            15,
+                            20,
+                            25,
+                            29,
+                            35,
+                            40,
+                            45,
+                            50,
+                            56,
+                            62,
+                            67,
+                            4294967295,
+                            4294967295,
+                            4294967295,
+                            4294967295,
+                            4294967295,
+                            75,
+                            79,
+                            84,
+                            4294967295,
+                            4294967295,
+                            4294967295,
+                            4294967295,
+                            87,
+                            92,
+                            96,
+                            101,
+                            2,
+                            4294967295,
+                            10,
+                            16,
+                            21,
+                            26,
+                            30,
+                            36,
+                            41,
+                            46,
+                            51,
+                            57,
+                            63,
+                            68,
+                            71,
+                            4294967295,
+                            4294967295,
+                            4294967295,
+                            4294967295,
+                            76,
+                            80,
+                            85,
+                            4294967295,
+                            4294967295,
+                            4294967295,
+                            4294967295,
+                            88,
+                            93,
+                            97,
+                            102,
+                            3,
+                            4294967295,
+                            11,
+                            17,
+                            22,
+                            27,
+                            31,
+                            37,
+                            42,
+                            47,
+                            52,
+                            58,
+                            64,
+                            4294967295,
+                            72,
+                            4294967295,
+                            4294967295,
+                            4294967295,
+                            4294967295,
+                            4294967295,
+                            4294967295,
+                            4294967295,
+                            4294967295,
+                            4294967295,
+                            4294967295,
+                            4294967295,
+                            89,
+                            94,
+                            98,
+                            4294967295,
+                            4,
+                            4294967295,
+                            12,
+                            18,
+                            23,
+                            28,
+                            32,
+                            38,
+                            43,
+                            48,
+                            53,
+                            59,
+                            4294967295,
+                            69,
+                            4294967295,
+                            4294967295,
+                            4294967295,
+                            4294967295,
+                            4294967295,
+                            4294967295,
+                            81,
+                            4294967295,
+                            4294967295,
+                            4294967295,
+                            4294967295,
+                            4294967295,
+                            90,
+                            95,
+                            99,
+                            103,
+                            5,
+                            7,
+                            13,
+                            4294967295,
+                            4294967295,
+                            4294967295,
+                            33,
+                            4294967295,
+                            4294967295,
+                            4294967295,
+                            54,
+                            60,
+                            65,
+                            4294967295,
+                            73,
+                            4294967295,
+                            4294967295,
+                            4294967295,
+                            4294967295,
+                            77,
+                            82,
+                            86,
+                            4294967295,
+                            4294967295,
+                            4294967295,
+                            4294967295,
+                            91,
+                            4294967295,
+                            100,
+                            4294967295,
+                            104,
+                            105,
+                            106,
+                            107,
+                            108,
+                            109,
+                            110,
+                            111,
+                            112,
+                            113,
+                            114,
+                            115,
+                            116,
+                            117,
+                            118,
+                            119,
+                            120,
+                            121,
+                            122,
+                            123,
+                            124,
+                            125,
+                            126,
+                            127,
+                            128,
+                            129,
+                            130,
+                            131,
+                            132,
+                            133
+                        ],
+                        "width": 30
+                    },
+                    "name": "Keyboard",
+                    "type": 2
+                }
+            ]
+        }
+    ],
+    "profile_name": "Static-Blue",
+    "profile_version": 6
+}

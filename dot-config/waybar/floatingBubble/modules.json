@@ -1,0 +1,146 @@
+{
+    // Groups
+    "group/hardware": {
+        "orientation": "horizontal",
+        "modules": [
+            "cpu",
+            "memory",
+            "temperature"
+        ]
+    },
+
+    // Modules
+    "custom/updates": {
+        "format":" {}",
+        "tooltip-format": "{}",
+        "escape": true,
+        "return-type": "json",
+        "exec": "~/.config/waybar/scripts/updates-color.sh",
+        "restart-interval": 600,
+        "tooltip": false
+    },
+
+    "hyprland/workspaces": {
+        "format": "{name}",
+        "sort-by": "id"
+    },
+
+    "tray": {
+        "spacing": 10,
+        "show-passive-items": true
+    },
+
+    "keyboard-state": {
+        "numlock": true,
+        "capslock": true,
+        "format": "{name} {icon}",
+        "format-icons": {
+            "locked": "",
+            "unlocked": ""
+        }
+    },
+
+    "clock": {
+        "format": "{:%x | %I:%M:%S %p}",
+        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+        "interval": 1,
+        "format-alt": "{:%Y-%m-%d}"
+    },
+
+    "cpu": {
+        "format": "{usage}% \uf4bc ",
+        "interval": 5,
+        "tooltip": false
+    },
+
+    "memory": {
+	"interval": 5,
+        "format": "{}%  "
+    },
+
+    "temperature": {
+        "critical-threshold": 80,
+	"interval": 5,
+        "format": "{temperatureC}°C {icon} ",
+        "format-icons": ["", "", ""]
+    },
+
+    "network": {
+        "format-wifi": "{essid}  ",
+        "format-ethernet": "{ipaddr}/{cidr} \udb80\ude00",
+        "tooltip-format": "{ifname} via {gwaddr} ",
+        "format-linked": "{ifname} (No IP) ",
+        "format-disconnected": "Disconnected ⚠",
+        "format-alt": "{ifname}: {ipaddr}/{cidr}",
+	"on-click": "nm-connection-editor"
+    },
+
+    "mpd": {
+        "format": "{stateIcon} {consumeIcon}{randomIcon}{repeatIcon}{singleIcon}{artist} - {album} - {title} ({elapsedTime:%M:%S}/{totalTime:%M:%S}) ⸨{songPosition}|{queueLength}⸩ {volume}% ",
+        "format-disconnected": "Disconnected ",
+        "format-stopped": "{consumeIcon}{randomIcon}{repeatIcon}{singleIcon}Stopped ",
+        "unknown-tag": "N/A",
+        "interval": 2,
+        "consume-icons": {
+            "on": " "
+        },
+        "random-icons": {
+            "off": "<span color=\"#f53c3c\"></span> ",
+            "on": " "
+        },
+        "repeat-icons": {
+            "on": " "
+        },
+        "single-icons": {
+            "on": "1 "
+        },
+        "state-icons": {
+            "paused": "",
+            "playing": ""
+        },
+        "tooltip-format": "MPD (connected)",
+        "tooltip-format-disconnected": "MPD (disconnected)"
+    },
+
+    "wireplumber": {
+        "format": "{volume}%  ",
+        "on-click": "pavucontrol"
+    },
+
+    "pulseaudio": {
+        "scroll-step": 5,
+        "format": "{volume}% {icon} {format_source}",
+        "format-bluetooth": "{volume}% {icon} {format_source}",
+        "format-bluetooth-muted": " {icon} {format_source}",
+        "format-muted": " {format_source}",
+        "format-source": "{volume}% ",
+        "format-source-muted": "",
+        "format-icons": {
+            "headphone": " ",
+            "hands-free": "",
+            "headset": "",
+            "phone": "",
+            "portable": "",
+            "car": "",
+            "default": ["", "", ""]
+        },
+        "on-click": "pavucontrol"
+    },
+
+    "custom/media": {
+        "format": "{icon} {}",
+        "return-type": "json",
+        "max-length": 40,
+        "format-icons": {
+            "spotify": "",
+            "default": "🎜"
+        },
+        "escape": true,
+        "exec": "$HOME/.config/waybar/mediaplayer.py 2> /dev/null"
+    },
+
+    "battery": {
+        "format": "{capacity}%  ",
+        "interval": 10
+    }
+}
