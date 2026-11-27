@@ -17,6 +17,7 @@ HISTSIZE=1000
 SAVEHIST=1000
 setopt beep
 bindkey -v
+export KEYTIMEOUT=1
 # End of lines configured by zsh-newuser-install
 
 # Keybinds
@@ -45,4 +46,4 @@ alias gc="git commit"
 
 export PATH=$PATH:/home/source/.spicetify
 export EDITOR=nvim
-export KEYTIMEOUT=1
+export MANPAGER="nvim +Man!"

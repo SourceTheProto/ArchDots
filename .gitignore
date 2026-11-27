@@ -6,4 +6,5 @@ dot-config/obs-studio/profiler_data
 dot-config/obs-studio/plugins
 dot-config/obs-studio/plugin_config
 dot-config/obs-studio/plugin_manager
+dot-config/obs-studio/basic/scenes/*.bak
 dot-config/thefuck/__pycache__
