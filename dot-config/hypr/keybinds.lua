@@ -11,25 +11,27 @@ local screeshotter = "flameshot gui"
 local clipboard    = "cursor-clip-toggle"
 local browser      = "flatpak run one.ablaze.floorp"
 local calculator   = "qalculate-qt"
+local notes        = "obsidian"
 
 ---------------------
 ---- KEYBINDINGS ----
 ---------------------
 
 -- Program Shortcuts
+hl.bind("SUPER + B", hl.dsp.exec_cmd(browser))
+hl.bind("SUPER + C", hl.dsp.exec_cmd(calculator))
+hl.bind("SUPER + N", hl.dsp.exec_cmd(notes))
+
+-- Component Shortcuts
 hl.bind("SUPER + RETURN",         hl.dsp.exec_cmd(terminal))
 hl.bind("SUPER + SHIFT + RETURN", hl.dsp.exec_cmd(terminal, {float = true}))
 hl.bind("SUPER + E",              hl.dsp.exec_cmd(fileManager))
 hl.bind("SUPER + SHIFT + E",      hl.dsp.exec_cmd(fileManager, {float = true}))
 hl.bind("SUPER + A",              hl.dsp.exec_cmd(menu))
 hl.bind("SUPER + ESCAPE",         hl.dsp.exec_cmd(taskManager))
-hl.bind("SUPER + B",              hl.dsp.exec_cmd(browser))
-hl.bind("SUPER + C",              hl.dsp.exec_cmd(calculator), {float = true})
-
--- Component Shortcuts
-hl.bind("SUPER + ALT + L", hl.dsp.exec_cmd(locker))
-hl.bind("PRINT", hl.dsp.exec_cmd(screeshotter))
-hl.bind("SUPER + V", hl.dsp.exec_cmd(clipboard))
+hl.bind("SUPER + ALT + L",        hl.dsp.exec_cmd(locker))
+hl.bind("PRINT",                  hl.dsp.exec_cmd(screeshotter))
+hl.bind("SUPER + V",              hl.dsp.exec_cmd(clipboard))
 
 -- Window Manipulation
 hl.bind("SUPER + Q", hl.dsp.window.close())

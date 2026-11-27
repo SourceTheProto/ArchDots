@@ -10,6 +10,8 @@ hl.on("hyprland.start", function()
 	hl.exec_cmd("fluxer", { workspace = "F silent", monitor = "DP-1" })
 	hl.exec_cmd("openrgb --startminimized")
 	hl.exec_cmd("easyeffects --hide-window")
+	hl.exec_cmd("syncthing serve --no-browser")
+	hl.exec_cmd("syncthingtray -g")
 
 	-- Components
 	hl.exec_cmd("hyprpaper")

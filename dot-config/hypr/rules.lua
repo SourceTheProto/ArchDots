@@ -44,6 +44,13 @@ hl.window_rule({
 })
 
 hl.window_rule({
+	match = { class = "md.obsidian.Obsidian" },
+
+	size = {1100, 850},
+	float = true,
+})
+
+hl.window_rule({
 	match = { class = "MEGAsync" },
 	move = "monitor_w-402-16 50",
 })
