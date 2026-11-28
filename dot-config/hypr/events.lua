@@ -36,10 +36,23 @@ hl.on("window.update_state", function(window, changes)
 	end
 
 	if changes.float == true then
-		if     window.class == "kitty" then
+		if window.class == "kitty" then
 			hl.dispatch(hl.dsp.window.resize({ x = 1020, y = 650 }))
 		elseif window.class == "org.kde.dolphin" then
 			hl.dispatch(hl.dsp.window.resize({ x = 1120, y = 750 }))
 		end
+	end
+end)
+
+-- Disable Numlock when opening helldivers
+hl.on("window.open", function(window)
+	if window ~= nil and window.class == "steam_app_553850" then
+		hl.config({input = { numlock_by_default = false }})
+	end
+end)
+
+hl.on("window.close", function(window)
+	if window ~= nil and window.class == "steam_app_553850" then
+		hl.config({input = { numlock_by_default = true }})
 	end
 end)
