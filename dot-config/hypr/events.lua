@@ -11,7 +11,7 @@ hl.on("hyprland.start", function()
 	hl.exec_cmd("openrgb --startminimized")
 	hl.exec_cmd("easyeffects --hide-window")
 	hl.exec_cmd("syncthing serve --no-browser")
-	hl.exec_cmd("syncthingtray -g")
+	hl.exec_cmd("syncthingtray -g --wait")
 
 	-- Components
 	hl.exec_cmd("hyprpaper")
